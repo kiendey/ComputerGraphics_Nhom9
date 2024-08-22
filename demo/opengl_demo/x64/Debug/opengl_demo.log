@@ -1,8 +1,13 @@
 ﻿  main.cpp
-C:\Users\Hung\source\repos\ComputerGraphics_Nhom9\demo\opengl_demo\include\GL\Vector_Matrix.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file 'main.cpp')
-  
-C:\Users\Hung\source\repos\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(363,72): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Hung\source\repos\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(378,75): warning C4305: 'argument': truncation from 'double' to 'float'
-  LINK : C:\Users\Hung\Source\Repos\ComputerGraphics_Nhom9\demo\x64\Debug\opengl_demo.exe not found or not built by the last incremental link; performing full link
-  opengl_demo.vcxproj -> C:\Users\Hung\Source\Repos\ComputerGraphics_Nhom9\demo\x64\Debug\opengl_demo.exe
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\include\GL\Vector_Matrix.h(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(31,61): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(33,61): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(35,61): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(36,64): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(41,65): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(42,68): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(44,64): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(46,68): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(363,72): warning C4305: 'argument': truncation from 'double' to 'float'
+E:\ComputerGraphics_Nhom9\demo\opengl_demo\main.cpp(378,75): warning C4305: 'argument': truncation from 'double' to 'float'
+  opengl_demo.vcxproj -> E:\ComputerGraphics_Nhom9\demo\x64\Debug\opengl_demo.exe
