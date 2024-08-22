@@ -4,7 +4,7 @@ Nhóm: 9
 Mô phỏng phòng khách bằng OpenGL khả lập trình và Visual C++  
 Thành viên:  
 1. Dương Danh Hiếu - MSV:
-2. Vũ Mạnh Hùng - MSV:
+2. Vũ Mạnh Hùng - MSV:2022604158
 3. Doãn Duy Hưng - MSV:
 4. Trần Trung Kiên - MSV:
 
