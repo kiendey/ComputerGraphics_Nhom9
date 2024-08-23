@@ -12,7 +12,7 @@ out vec4 out_color;
 void main() {
 	//-----------ch? ??nh các v? trí-------------
 		// v? trí ngu?n sáng trong th? gi?i
-	vec3 light_position_world = vec3(0.0, -1.0, 2.0);
+	vec3 light_position_world = vec3(0.0, 4.0, 2.0);
 	// bi?n ??i v? trí ngu?n sáng sang eye space
 	vec3 light_position_eye = vec3(view_mat_shader * vec4(light_position_world, 1.0));
 
