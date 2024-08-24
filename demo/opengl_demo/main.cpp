@@ -423,6 +423,12 @@ r[] = { 0.0f, 0.0f, 0.0f },
 s[] = { 1.0f, 1.0f, 1.0f },
 t[] = { 0.0f, 0.0f, 0.0f };
 
+
+bool
+translated = false,
+rotated = false,
+scaled = false;
+
 class MatrixStack {
 	int    index;
 	int    size;
@@ -466,12 +472,12 @@ translated = false,
 rotated = false,
 scaled = false;
 // ------------------------------------------
-void MATSAN()
+void matSAN()
 {
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(0.0f, -3.0f, 0.0f)) * scale(vec3(24.0f, 0.02, 20.0f));
+	instance = translate(vec3(0.0f, -3.0f, 0.0f)) * scale(vec3(14.0f, 0.02f, 10.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -480,12 +486,13 @@ void MATSAN()
 
 	model_mat_cpp = mvstack.pop();
 }
+
 void tuongSAU()
 {
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(0.0, 1.99f, -9.995f)) * rotate_x(90) * scale(vec3(24.0f, 0.01f, 10.0f));
+	instance = translate(vec3(0.0, -0.49f, -5.0f))* rotate_x(90)  * scale(vec3(14.0f, 0.01f, 5.0f)) ;
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -499,7 +506,7 @@ void tuongPHAI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(-11.995f, 1.99f, 0.0f)) * rotate_z(90) * scale(vec3(10.0f, 0.01f, 20.0f));
+	instance = translate(vec3(-7.0f, -0.49f, 0.0f)) * rotate_z(90) * scale(vec3(5.0f, 0.01f, 10.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -538,10 +545,11 @@ void tuongTRUOCPHAI() {
 }
 
 void tuongTRUOCTRAI() {
+{
 	mvstack.push(model_mat_cpp);
 
-	mat4 instance = identity_mat4();
 	instance = translate(vec3(-8.495f, 1.99f, 9.995f)) * scale(vec3(7.0f, 10.0f, 0.1f));
+	instance = translate(vec3(4.995f, -0.49f, 5.0f)) * rotate_x(90) * scale(vec3(4.0f, 0.01f, 5.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -549,13 +557,13 @@ void tuongTRUOCTRAI() {
 	glDrawArrays(GL_TRIANGLES, 108, 144);
 
 	model_mat_cpp = mvstack.pop();
-}
 void CANHPHAI()
+{
 {
 	mvstack.push(model_mat_cpp);
 
-	mat4 instance = identity_mat4();
 	instance = scale(vec3(5.0f, 10.0f, 0.1f));
+	instance = translate(vec3(-4.995f, -0.49f, 5.0f)) * rotate_x(90) * scale(vec3(4.0f, 0.01f, 5.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -563,27 +571,28 @@ void CANHPHAI()
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 
 	model_mat_cpp = mvstack.pop();
-}
 void CANHTRAI()
+
+void canhTRAI()
 {
 	mvstack.push(model_mat_cpp);
-
-	mat4 instance = identity_mat4();
 	instance = translate(vec3(3.0f, -0.49f, 6.5f))* rotate_y(90) * scale(vec3(3.0f, 5.0f, 0.01));
 	instance = scale(vec3(5.0f, 10.0f, 0.1));
-	mat4 model_MS = model_mat_cpp * instance;
+	instance = translate(vec3(3.0f, -0.49f, 6.5f)) * rotate_y(alphat) * scale(vec3(3.0f, 5.0f, 0.01));
 
-	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	mat4 model_MS = model_mat_cpp * instance;
 	glDrawArrays(GL_TRIANGLES, 72, 108);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
 	model_mat_cpp = mvstack.pop();
 }
 
 void canhPHAI()
 {
 	mvstack.push(model_mat_cpp);
-
-	mat4 instance = identity_mat4();
 	instance = translate(vec3(-3.0f, -0.49f, 6.5)) * rotate_y(90) * scale(vec3(3.0f, 5.0f, 0.01));
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-3.0f, -0.49f, 6.5)) * rotate_y(alphap) * scale(vec3(3.0f, 5.0f, 0.01));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -823,6 +832,7 @@ void CreatVaoVbo()
 
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);
+
 	glEnableVertexAttribArray(2);
 }
 // ------------------------------------------
@@ -894,7 +904,7 @@ void DisplayFunc(void)
 	{
 		model_mat_cpp = model_mat_cpp * scale(vec3(s[0], s[1], s[2]));
 		glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_mat_cpp.m);
-	}
+	vec3	eye(0.0f, 4.0f, 12.0f),
 
 	vec3	eye(0.0f, 8.0f, 30.0f),
 		at(0.0f, 0.0f, 0.0f),
@@ -916,8 +926,8 @@ void DisplayFunc(void)
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS);
 
-	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	matSAN();
 	MATSAN();
 
 	mvstack.push(model_mat_cpp);
@@ -931,21 +941,21 @@ void DisplayFunc(void)
 	mvstack.push(model_mat_cpp);
 	tuongTRAI();
 	model_mat_cpp = mvstack.pop();
-
+	tuongTRUOC1();
 	mvstack.push(model_mat_cpp);
 	tuongTRUOCPHAI();
 	model_mat_cpp = mvstack.pop();
-
+	tuongTRUOC2();
 	mvstack.push(model_mat_cpp);
 	tuongTRUOCTRAI();
 	model_mat_cpp = mvstack.pop();
-
-	mvstack.push(model_mat_cpp);
+	model_mat_cpp = model_mat_cpp;
+	canhTRAI();
 	model_mat_cpp = model_mat_cpp * translate(vec3(0.0f, 1.99f, 9.995f)) * translate(vec3(5.0f, 0.0, 0.0)) * rotate_y(alphap) * translate(vec3(-2.5, 0.0, 0.0));
 	CANHPHAI();
 	model_mat_cpp = mvstack.pop();
-
-	mvstack.push(model_mat_cpp);
+	model_mat_cpp = model_mat_cpp;
+	canhPHAI();
 	model_mat_cpp = model_mat_cpp * translate(vec3(0.0f, 1.99, 9.995f)) * translate(vec3(-5.0, 0.0, 0.0)) * rotate_y(alphat) * translate(vec3(2.5, 0.0, 0.0));
 	CANHTRAI();
 	model_mat_cpp = mvstack.pop();
@@ -987,8 +997,6 @@ void DisplayFunc(void)
 	model_mat_cpp = mvstack.pop();
 
 	mvstack.push(model_mat_cpp);
-	matNGOI();
-	model_mat_cpp = mvstack.pop();
 
 	mvstack.push(model_mat_cpp);
 	trucQUAT();
@@ -1000,6 +1008,8 @@ void DisplayFunc(void)
 
 	mvstack.push(model_mat_cpp);
 	canhQUATTRAI();
+	model_mat_cpp = mvstack.pop();
+
 	model_mat_cpp = mvstack.pop();
 
 	glutSwapBuffers();
@@ -1102,14 +1112,6 @@ void KeyboardFunc(unsigned char key, int x, int y)
 		break;
 	case 'h':
 		t[2] += 0.05f;
-		translated = true;
-		break;
-	case 'm':
-		alphat = -90.0f;
-		alphap = 90.0f;
-		break;
-	case 'd':
-		alphat = 0.0f;
 		alphap = 0.0f;
 		break;
 	}
