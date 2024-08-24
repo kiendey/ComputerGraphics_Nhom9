@@ -363,8 +363,8 @@ public:
 
 MatrixStack  mvstack;
 
-float alphat = 0.0f;
-float alphap = 0.0f;
+float alphat = 90.0f;
+float alphap = 90.0f;
 // ------------------------------------------
 void matSAN()
 {
@@ -460,7 +460,7 @@ void canhTRAI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(1.5f,-0.49f,5.0f)) * scale(vec3(3.0f, 5.0f, 0.01));
+	instance = translate(vec3(3.0f, -0.49f, 6.5f)) * rotate_y(alphat) * scale(vec3(3.0f, 5.0f, 0.01));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -475,7 +475,154 @@ void canhPHAI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(-1.5f, -0.49f, 5.0f)) * scale(vec3(3.0f, 5.0f, 0.01)) ;
+	instance = translate(vec3(-3.0f, -0.49f, 6.5)) * rotate_y(alphap) * scale(vec3(3.0f, 5.0f, 0.01));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void matBAN()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(0.0, -0.89, 0.0)) * scale(vec3(3.0f, 0.2f, 6.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanTRAITRUOC()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.3, -1.99, 2.8)) * scale(vec3(0.4f, 2.0f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanTRAISAU()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.3, -1.99, 2.8)) * scale(vec3(0.4f, 2.0f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanPHAITRUOC()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.3, -1.99, -2.8)) * scale(vec3(0.4f, 2.0f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void chanPHAISAU()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.3, -1.99, -2.8)) * scale(vec3(0.4f, 2.0f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void TIVI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(6.98, 0.0, 0.0)) * scale(vec3(0.04f, 2.5f, 5.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void TRANH1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-6.98, 1.2, 0.0)) * scale(vec3(0.04f, 1.0f, 2.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void TRANH2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-6.98, -0.3, -1.5)) * scale(vec3(0.04f, 1.0f, 2.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void TRANH3()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-6.98, -0.3, 1.5)) * scale(vec3(0.04f, 1.0f, 2.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void matNGOI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-5.5, -1.99, 0.0)) * scale(vec3(3.0f, 2.0f, 6.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -631,14 +778,55 @@ void DisplayFunc(void)
 	model_mat_cpp = mvstack.pop();
 
 	mvstack.push(model_mat_cpp);
-	model_mat_cpp = model_mat_cpp * translate(vec3(1.5,0.0,1.5)) * rotate_y(0)* translate(vec3(-1.5,0.0,-1.5));
+	model_mat_cpp = model_mat_cpp;
 	canhTRAI();
 	model_mat_cpp = mvstack.pop();
-	
+
 	mvstack.push(model_mat_cpp);
-	model_mat_cpp = model_mat_cpp * translate(vec3(-1.5, 0.0, 1.5)) * rotate_y(0) * translate(vec3(1.5,0.0,-1.5));
+	model_mat_cpp = model_mat_cpp;
 	canhPHAI();
 	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	matBAN();
+	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	chanTRAITRUOC();
+	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	chanTRAISAU();
+	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	chanPHAITRUOC();
+	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	chanPHAISAU();
+	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	TIVI();
+	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	TRANH1();
+	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	TRANH2();
+	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	TRANH3();
+	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	matNGOI();
+	model_mat_cpp = mvstack.pop();
+
 	glutSwapBuffers();
 }
 // ------------------------------------------
