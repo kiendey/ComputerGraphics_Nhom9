@@ -26,7 +26,7 @@ typedef struct
 //  v2------v3
 	// Mảng dữ liệu
 Vertex Vertices[] =
-{	//Vertex[0]
+{
 	// v0-v1-v2 (front)
 	{ {  0.5f,	 0.5f,	0.5f, 1.0 },{ 1.0f, 1.0f, 1.0f, 1.0f },{ 0, 0, 1, 0 } },
 	{ { -0.5f,	 0.5f,	0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 0, 1, 0 } },
@@ -81,9 +81,8 @@ Vertex Vertices[] =
 	{ {  0.5f,	 0.5f,	-0.5f, 1.0 },{ 1.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
 	{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 1.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
 
-	// Vertex[36]
-	//màu sàn nhà
-	// Mặt dưới (sàn nhà)
+		//màu sàn nhà
+		// Mặt dưới (sàn nhà)
 	{ { -0.5f, -0.5f,  0.5f, 1.0 },{ 0.8f, 0.8f, 0.8f, 1.0f },{ 0, 0, 1, 0 } },
 	{ {  0.5f, -0.5f,  0.5f, 1.0 },{ 0.8f, 0.8f, 0.8f, 1.0f },{ 0, 0, 1, 0 } },
 	{ {  0.5f, -0.5f, -0.5f, 1.0 },{ 0.8f, 0.8f, 0.8f, 1.0f },{ 0, 0, 1, 0 } },
@@ -137,9 +136,8 @@ Vertex Vertices[] =
 	{ { -0.5f,  0.5f,  0.5f, 1.0 },{ 0.6f, 0.3f, 0.1f, 1.0f },{ 0, 0, 1, 0 } },
 	{ { -0.5f, -0.5f,  0.5f, 1.0 },{ 0.6f, 0.3f, 0.1f, 1.0f },{ 0, 0, 1, 0 } },
 
-	//Vertex[72]
-	// màu cánh cửa
-	// Mặt trước của cánh cửa
+// màu cánh cửa
+// Mặt trước của cánh cửa
 	{ { -0.5f, -0.5f,  0.5f, 1.0 },{ 0.8f, 0.5f, 0.3f, 1.0f },{ 0, 0, 1, 0 } },
 	{ {  0.5f, -0.5f,  0.5f, 1.0 },{ 0.8f, 0.5f, 0.3f, 1.0f },{ 0, 0, 1, 0 } },
 	{ {  0.5f,  0.5f,  0.5f, 1.0 },{ 0.8f, 0.5f, 0.3f, 1.0f },{ 0, 0, 1, 0 } },
@@ -192,7 +190,7 @@ Vertex Vertices[] =
 	{ {  0.5f, -0.5f, -0.5f, 1.0 },{ 0.9f, 0.6f, 0.4f, 1.0f },{ 0, -1, 0, 0 } },
 	{ { -0.5f, -0.5f, -0.5f, 1.0 },{ 0.9f, 0.6f, 0.4f, 1.0f },{ 0, -1, 0, 0 } },
 	{ { -0.5f, -0.5f,  0.5f, 1.0 },{ 0.9f, 0.6f, 0.4f, 1.0f },{ 0, -1, 0, 0 } },
-	// đổi màu tường xanh dương
+		// đổi màu tường xanh dương
 	{ {  0.5f,	 0.5f,	0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 0, 1, 0 } },  // Xanh dương sáng hơn
 	{ { -0.5f,	 0.5f,	0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 0, 1, 0 } },  // Xanh dương sáng hơn
 	{ { -0.5f,	-0.5f,	0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 0, 1, 0 } },  // Xanh dương sáng hơn
@@ -210,64 +208,35 @@ Vertex Vertices[] =
 	{ { 0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 1, 0, 0, 0 } },  // Xanh dương sáng hơn
 	{ { 0.5f,	 0.5f,   0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 1, 0, 0, 0 } },  // Xanh dương sáng hơn
 
-
 	// v0-v5-v6 (top)
 	{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ {  0.5f,	0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },  
-	{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },  
+	{ {  0.5f,	0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
+	{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
 	// v6-v1-v0
-	{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },  
-	{ { -0.5f,	0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },  
-	{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },  
+	{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
+	{ { -0.5f,	0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
+	{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
 
 	// v1-v6-v7 (left)
-	{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },  
-	{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },  
-	{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },  
+	{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
+	{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
+	{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
 	// v7-v2-v1
-	{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },  
-	{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },  
-	{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },  
+	{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
+	{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
+	{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
 
 	// v7-v4-v3 (bottom)
-	{ { -0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },  
-	{ {  0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },  
-	{ {  0.5f,	 -0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } }, 
+	{ { -0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
+	{ {  0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
+	{ {  0.5f,	 -0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
 	// v3-v2-v7
-	{ {  0.5f,	 -0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } }, 
-	{ { -0.5f,	 -0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },  
-	{ { -0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },  
-
-// v0-v5-v6 (top)
-{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
-{ {  0.5f,	0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
-{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
-// v6-v1-v0
-{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
-{ { -0.5f,	0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
-{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
-
-// v1-v6-v7 (left)
-{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
-{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
-{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
-// v7-v2-v1
-{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
-{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
-{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ -1, 0, 0, 0 } },
-
-// v7-v4-v3 (bottom)
-{ { -0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
-{ {  0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
-{ {  0.5f,	 -0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
-// v3-v2-v7
-{ {  0.5f,	 -0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
-{ { -0.5f,	 -0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
-{ { -0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
+	{ {  0.5f,	 -0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
+	{ { -0.5f,	 -0.5f,	 0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
+	{ { -0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.3f, 0.3f, 1.0f, 1.0f },{ 0, -1, 0, 0 } },
 
 
-
-		// Mặt trước của tường
+	// Mặt trước của tường
 	{ { -0.5f,  0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 0, 1, 0 } },
 	{ {  0.5f,  0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 0, 1, 0 } },
 	{ {  0.5f, -0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 0, 1, 0 } },
@@ -276,7 +245,7 @@ Vertex Vertices[] =
 	{ { -0.5f, -0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 0, 1, 0 } },
 	{ { -0.5f,  0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 0, 1, 0 } },
 
-		// Mặt sau của tường
+	// Mặt sau của tường
 	{ { -0.5f,  0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 0, -1, 0 } },
 	{ {  0.5f,  0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 0, -1, 0 } },
 	{ {  0.5f, -0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 0, -1, 0 } },
@@ -317,79 +286,10 @@ Vertex Vertices[] =
 	{ {  0.5f, -0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
 	{ {  0.5f, -0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
 
-
-	{ {  0.5f, -0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
-	{ { -0.5f, -0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
-	{ { -0.5f, -0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
-		
-		//Quạt
-		// v0-v1-v2 (front)
-	{ {  0.5f,	 0.5f,	0.5f, 1.0 },{ 0.0f, 1.0f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,	 0.5f,	0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,	-0.5f,	0.5f, 1.0 },{ 0.0f, 1.0f, 1.0f, 1.0f },{ 0, 1, 0, 0 } },
-		// v2-v3-v0
-	{ { -0.5f,	-0.5f,	0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ {  0.5f,	-0.5f,	0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ {  0.5f,	 0.5f,	0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-
-	{ {  0.5f,  0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,  0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,  0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, 1, 0, 0 } },
-
-	// Mặt dưới của tường
-	{ { -0.5f, -0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
-	{ {  0.5f, -0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
-	{ {  0.5f, -0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
-
 	{ {  0.5f, -0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
 	{ { -0.5f, -0.5f, -0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
 	{ { -0.5f, -0.5f,  0.05f, 1.0 },{ 0.9f, 0.6f, 0.4f, 0.5f },{ 0, -1, 0, 0 } },
 
-
-		// v0-v3-v4 (right)
-	{ { 0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { 0.5f,	-0.5f,   0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { 0.5f,	-0.5f,  -0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-		// v4-v5-v0
-	{ { 0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { 0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { 0.5f,	 0.5f,   0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-
-		// v0-v5-v6 (top)
-	{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ {  0.5f,	0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-		// v6-v1-v0
-	{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,	0.5f,	 0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-
-		// v1-v6-v7 (left)
-	{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-		// v7-v2-v1
-	{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-
-		// v7-v4-v3 (bottom)
-	{ { -0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0,1, 0, 0 } },
-	{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0,1, 0, 0 } },
-	{ {  0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0,1, 0, 0 } },
-		// v3-v2-v7
-	{ {  0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0,1, 0, 0 } },
-	{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0,1, 0, 0 } },
-	{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0,1, 0, 0 } },
-
-		// v4-v7-v6 (back)
-	{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
-	{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1,0, 0 } },
-	{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1,0, 0 } },
-		// v6-v5-v4
-	{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1,0, 0 } },
-	{ {  0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1,0, 0 } },
-	{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 1.0f, 0.0f, 1.0f },{ 0, 1,0, 0 } },
 };
 // ----------------------------------------
 
@@ -422,12 +322,6 @@ float
 r[] = { 0.0f, 0.0f, 0.0f },
 s[] = { 1.0f, 1.0f, 1.0f },
 t[] = { 0.0f, 0.0f, 0.0f };
-
-
-bool
-translated = false,
-rotated = false,
-scaled = false;
 
 class MatrixStack {
 	int    index;
@@ -462,22 +356,100 @@ public:
 
 MatrixStack  mvstack;
 
-
-
 float alphat = 0.0f;
-
 float alphap = 0.0f;
+float alphaQuat = 0.0f;
+
 bool
 translated = false,
 rotated = false,
 scaled = false;
 // ------------------------------------------
-void matSAN()
+
+// ------------------------------------------
+string ReadShaderSourceFile(string fileName) {
+	fstream reader(fileName.c_str());
+	string line;
+	string code = "";
+	while (getline(reader, line)) {
+		code += line + "\n";
+	}
+	reader.close();
+	return code;
+}
+
+// ------------------------------------------
+void CreatVaoVbo()
+{
+	glGenVertexArrays(1, &VaoId);
+	glBindVertexArray(VaoId);
+
+	glGenBuffers(1, &VboId);
+	glBindBuffer(GL_ARRAY_BUFFER, VboId);
+	glBufferData(GL_ARRAY_BUFFER, BufferSize, Vertices, GL_STATIC_DRAW);
+
+	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, VertexSize, 0);	// position
+	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, VertexSize, (GLvoid*)RgbOffset); //color
+	glVertexAttribPointer(2, 4, GL_FLOAT, GL_FALSE, VertexSize, (GLvoid*)NormalOffset); //normal
+
+	glEnableVertexAttribArray(0);
+	glEnableVertexAttribArray(1);
+	glEnableVertexAttribArray(2);
+}
+// ------------------------------------------
+void CreatShaders()
+{
+	string vertexSrc = ReadShaderSourceFile("./vs.shader");
+	string fragmentSrc = ReadShaderSourceFile("./fs.shader");
+
+	const GLchar* VertexShader = vertexSrc.c_str();
+	const GLchar* FragmentShader = fragmentSrc.c_str();
+
+	VertexShaderId = glCreateShader(GL_VERTEX_SHADER);
+	glShaderSource(VertexShaderId, 1, &VertexShader, NULL);
+	glCompileShader(VertexShaderId);
+
+	FragmentShaderId = glCreateShader(GL_FRAGMENT_SHADER);
+	glShaderSource(FragmentShaderId, 1, &FragmentShader, NULL);
+	glCompileShader(FragmentShaderId);
+
+	ProgramId = glCreateProgram();
+	glAttachShader(ProgramId, VertexShaderId);
+	glAttachShader(ProgramId, FragmentShaderId);
+	glLinkProgram(ProgramId);
+	glUseProgram(ProgramId);
+}
+// ------------------------------------------
+void CloseFunc()
+{
+	glUseProgram(0);
+
+	glDetachShader(ProgramId, VertexShaderId);
+	glDetachShader(ProgramId, FragmentShaderId);
+
+	glDeleteShader(FragmentShaderId);
+	glDeleteShader(VertexShaderId);
+
+	glDeleteProgram(ProgramId);
+
+	glDisableVertexAttribArray(2);
+	glDisableVertexAttribArray(1);
+	glDisableVertexAttribArray(0);
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glDeleteBuffers(1, &VboId);
+
+	glBindVertexArray(0);
+	glDeleteVertexArrays(1, &VaoId);
+}
+//---------------------------------------------------------------
+
+void MATSAN()
 {
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(0.0f, -3.0f, 0.0f)) * scale(vec3(14.0f, 0.02f, 10.0f));
+	instance = translate(vec3(0.0f, -3.0f, 0.0f)) * scale(vec3(24.0f, 0.02, 20.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -486,13 +458,12 @@ void matSAN()
 
 	model_mat_cpp = mvstack.pop();
 }
-
 void tuongSAU()
 {
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(0.0, -0.49f, -5.0f))* rotate_x(90)  * scale(vec3(14.0f, 0.01f, 5.0f)) ;
+	instance = translate(vec3(0.0, 1.99f, -9.995f)) * rotate_x(90) * scale(vec3(24.0f, 0.01f, 10.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -506,7 +477,7 @@ void tuongPHAI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(-7.0f, -0.49f, 0.0f)) * rotate_z(90) * scale(vec3(5.0f, 0.01f, 10.0f));
+	instance = translate(vec3(-11.995f, 1.99f, 0.0f)) * rotate_z(90) * scale(vec3(10.0f, 0.01f, 20.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -545,11 +516,10 @@ void tuongTRUOCPHAI() {
 }
 
 void tuongTRUOCTRAI() {
-{
 	mvstack.push(model_mat_cpp);
 
+	mat4 instance = identity_mat4();
 	instance = translate(vec3(-8.495f, 1.99f, 9.995f)) * scale(vec3(7.0f, 10.0f, 0.1f));
-	instance = translate(vec3(4.995f, -0.49f, 5.0f)) * rotate_x(90) * scale(vec3(4.0f, 0.01f, 5.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -557,56 +527,31 @@ void tuongTRUOCTRAI() {
 	glDrawArrays(GL_TRIANGLES, 108, 144);
 
 	model_mat_cpp = mvstack.pop();
+}
 void CANHPHAI()
-{
 {
 	mvstack.push(model_mat_cpp);
 
+	mat4 instance = identity_mat4();
 	instance = scale(vec3(5.0f, 10.0f, 0.1f));
-	instance = translate(vec3(-4.995f, -0.49f, 5.0f)) * rotate_x(90) * scale(vec3(4.0f, 0.01f, 5.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
 	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
-
-	model_mat_cpp = mvstack.pop();
-void CANHTRAI()
-
-void canhTRAI()
-{
-	mvstack.push(model_mat_cpp);
-	instance = translate(vec3(3.0f, -0.49f, 6.5f))* rotate_y(90) * scale(vec3(3.0f, 5.0f, 0.01));
-	instance = scale(vec3(5.0f, 10.0f, 0.1));
-	instance = translate(vec3(3.0f, -0.49f, 6.5f)) * rotate_y(alphat) * scale(vec3(3.0f, 5.0f, 0.01));
-
-	mat4 model_MS = model_mat_cpp * instance;
-	glDrawArrays(GL_TRIANGLES, 72, 108);
-	glDrawArrays(GL_TRIANGLES, 72, 108);
 
 	model_mat_cpp = mvstack.pop();
 }
-
-void canhPHAI()
+void CANHTRAI()
 {
 	mvstack.push(model_mat_cpp);
-	instance = translate(vec3(-3.0f, -0.49f, 6.5)) * rotate_y(90) * scale(vec3(3.0f, 5.0f, 0.01));
+
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(-3.0f, -0.49f, 6.5)) * rotate_y(alphap) * scale(vec3(3.0f, 5.0f, 0.01));
-
-	mat4 model_MS = model_mat_cpp * instance;
-
-	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
-	glDrawArrays(GL_TRIANGLES, 72, 108);
-
 	instance = scale(vec3(5.0f, 10.0f, 0.1));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
 	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
-	glDrawArrays(GL_TRIANGLES, 0, 36);
-
-
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 
 	model_mat_cpp = mvstack.pop();
@@ -759,12 +704,12 @@ void matNGOI()
 	model_mat_cpp = mvstack.pop();
 }
 
-void trucQUAT() 
+void duiQUAT()
 {
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = scale(vec3(0.2f, 2.0f, 0.2f)) * translate(vec3(0.0, 1.0, 0.0));
+	instance = scale(vec3(1.2f, 0.5f, 7.8f)) * translate(vec3(0.0, 13.9, 0.0));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -774,13 +719,27 @@ void trucQUAT()
 	model_mat_cpp = mvstack.pop();
 }
 
+void trucQUAT()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = scale(vec3(0.2f, 2.0f, 1.5f)) * translate(vec3(0.0, 3.0, 0.0));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 144, 180);
+
+	model_mat_cpp = mvstack.pop();
+}
 
 void tamQUAT()
 {
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = scale(vec3(0.9f, 0.2f, 0.9f)) * translate(vec3(0.0, 4.7, 0.0));
+	instance = scale(vec3(0.9f, 0.2f, 5.0f)) * translate(vec3(0.0, 24.5, 0.0));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -795,7 +754,7 @@ void canhQUATTRAI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = scale(vec3(3.5f, 0.15f, 1.5f)) * translate(vec3(0.6, 6.15, 0.0));
+	instance = scale(vec3(3.5f, 0.15f, 7.5f)) * translate(vec3(0.6, 32.5, 0.0));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -804,82 +763,50 @@ void canhQUATTRAI()
 
 	model_mat_cpp = mvstack.pop();
 }
-// ------------------------------------------
-string ReadShaderSourceFile(string fileName) {
-	fstream reader(fileName.c_str());
-	string line;
-	string code = "";
-	while (getline(reader, line)) {
-		code += line + "\n";
-	}
-	reader.close();
-	return code;
+
+void canhQUATPHAI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = scale(vec3(3.5f, 0.15f, 7.5f)) * translate(vec3(-0.6, 32.5, 0.0));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 144, 180);
+
+	model_mat_cpp = mvstack.pop();
 }
 
-// ------------------------------------------
-void CreatVaoVbo()
+void canhQUATTRUOC()
 {
-	glGenVertexArrays(1, &VaoId);
-	glBindVertexArray(VaoId);
+	mvstack.push(model_mat_cpp);
 
-	glGenBuffers(1, &VboId);
-	glBindBuffer(GL_ARRAY_BUFFER, VboId);
-	glBufferData(GL_ARRAY_BUFFER, BufferSize, Vertices, GL_STATIC_DRAW);
+	mat4 instance = identity_mat4();
+	instance = scale(vec3(6.5f, 0.15f, 7.5f)) * translate(vec3(0.0, 32.5, 0.0)) * rotate_y(90);
 
-	glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, VertexSize, 0);	// position
-	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, VertexSize, (GLvoid*)RgbOffset); //color
-	glVertexAttribPointer(2, 4, GL_FLOAT, GL_FALSE, VertexSize, (GLvoid*)NormalOffset); //normal
+	mat4 model_MS = model_mat_cpp * instance;
 
-	glEnableVertexAttribArray(0);
-	glEnableVertexAttribArray(1);
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 144, 180);
 
-	glEnableVertexAttribArray(2);
+	model_mat_cpp = mvstack.pop();
 }
-// ------------------------------------------
-void CreatShaders()
+
+void canhQUATSAU()
 {
-	string vertexSrc = ReadShaderSourceFile("./vs.shader");
-	string fragmentSrc = ReadShaderSourceFile("./fs.shader");
+	mvstack.push(model_mat_cpp);
 
-	const GLchar* VertexShader = vertexSrc.c_str();
-	const GLchar* FragmentShader = fragmentSrc.c_str();
+	mat4 instance = identity_mat4();
+	instance = scale(vec3(6.5f, 0.15f, 7.5f)) * translate(vec3(0.0, 32.5, 0.0)) * rotate_y(-90);
 
-	VertexShaderId = glCreateShader(GL_VERTEX_SHADER);
-	glShaderSource(VertexShaderId, 1, &VertexShader, NULL);
-	glCompileShader(VertexShaderId);
+	mat4 model_MS = model_mat_cpp * instance;
 
-	FragmentShaderId = glCreateShader(GL_FRAGMENT_SHADER);
-	glShaderSource(FragmentShaderId, 1, &FragmentShader, NULL);
-	glCompileShader(FragmentShaderId);
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 144, 180);
 
-	ProgramId = glCreateProgram();
-	glAttachShader(ProgramId, VertexShaderId);
-	glAttachShader(ProgramId, FragmentShaderId);
-	glLinkProgram(ProgramId);
-	glUseProgram(ProgramId);
-}
-// ------------------------------------------
-void CloseFunc()
-{
-	glUseProgram(0);
-
-	glDetachShader(ProgramId, VertexShaderId);
-	glDetachShader(ProgramId, FragmentShaderId);
-
-	glDeleteShader(FragmentShaderId);
-	glDeleteShader(VertexShaderId);
-
-	glDeleteProgram(ProgramId);
-
-	glDisableVertexAttribArray(2);
-	glDisableVertexAttribArray(1);
-	glDisableVertexAttribArray(0);
-
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glDeleteBuffers(1, &VboId);
-
-	glBindVertexArray(0);
-	glDeleteVertexArrays(1, &VaoId);
+	model_mat_cpp = mvstack.pop();
 }
 // ------------------------------------------
 
@@ -904,7 +831,7 @@ void DisplayFunc(void)
 	{
 		model_mat_cpp = model_mat_cpp * scale(vec3(s[0], s[1], s[2]));
 		glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_mat_cpp.m);
-	vec3	eye(0.0f, 4.0f, 12.0f),
+	}
 
 	vec3	eye(0.0f, 8.0f, 30.0f),
 		at(0.0f, 0.0f, 0.0f),
@@ -926,8 +853,8 @@ void DisplayFunc(void)
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS);
 
+	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	matSAN();
 	MATSAN();
 
 	mvstack.push(model_mat_cpp);
@@ -941,21 +868,21 @@ void DisplayFunc(void)
 	mvstack.push(model_mat_cpp);
 	tuongTRAI();
 	model_mat_cpp = mvstack.pop();
-	tuongTRUOC1();
+
 	mvstack.push(model_mat_cpp);
 	tuongTRUOCPHAI();
 	model_mat_cpp = mvstack.pop();
-	tuongTRUOC2();
+
 	mvstack.push(model_mat_cpp);
 	tuongTRUOCTRAI();
 	model_mat_cpp = mvstack.pop();
-	model_mat_cpp = model_mat_cpp;
-	canhTRAI();
+
+	mvstack.push(model_mat_cpp);
 	model_mat_cpp = model_mat_cpp * translate(vec3(0.0f, 1.99f, 9.995f)) * translate(vec3(5.0f, 0.0, 0.0)) * rotate_y(alphap) * translate(vec3(-2.5, 0.0, 0.0));
 	CANHPHAI();
 	model_mat_cpp = mvstack.pop();
-	model_mat_cpp = model_mat_cpp;
-	canhPHAI();
+
+	mvstack.push(model_mat_cpp);
 	model_mat_cpp = model_mat_cpp * translate(vec3(0.0f, 1.99, 9.995f)) * translate(vec3(-5.0, 0.0, 0.0)) * rotate_y(alphat) * translate(vec3(2.5, 0.0, 0.0));
 	CANHTRAI();
 	model_mat_cpp = mvstack.pop();
@@ -997,21 +924,19 @@ void DisplayFunc(void)
 	model_mat_cpp = mvstack.pop();
 
 	mvstack.push(model_mat_cpp);
+	matNGOI();
+	model_mat_cpp = mvstack.pop();
 
 	mvstack.push(model_mat_cpp);
+	duiQUAT();
 	trucQUAT();
-	model_mat_cpp = mvstack.pop();
-
-	mvstack.push(model_mat_cpp);
+	model_mat_cpp = model_mat_cpp * rotate_y(alphaQuat) ;
 	tamQUAT();
-	model_mat_cpp = mvstack.pop();
-
-	mvstack.push(model_mat_cpp);
 	canhQUATTRAI();
+	canhQUATPHAI();
+	canhQUATTRUOC();
+	canhQUATSAU();
 	model_mat_cpp = mvstack.pop();
-
-	model_mat_cpp = mvstack.pop();
-
 	glutSwapBuffers();
 }
 // ------------------------------------------
@@ -1025,8 +950,23 @@ void ReshapeFunc(int Width, int Height)
 // ------------------------------------------
 void IdleFunc(void)
 {
+	// thiết lập cờ gọi hiển thị lại
 	glutPostRedisplay();
 }
+
+
+void IdleFunc1( void)
+{
+	// tính toán góc quay
+	alphaQuat += 0.35f;
+	if (alphaQuat > 360.0f) {
+		alphaQuat -= 360.0f;
+	}
+
+	// thiết lập cờ gọi hiển thị lại
+	glutPostRedisplay();
+}
+
 // ------------------------------------------
 void KeyboardFunc(unsigned char key, int x, int y)
 {
@@ -1060,19 +1000,6 @@ void KeyboardFunc(unsigned char key, int x, int y)
 		r[2] += 10.0f;
 		rotated = true;
 		break;
-
-	//case '1':
-	//	alphap -= 10.0f;
-	//	if (alphap <= -170.0f)
-	//		alphap == -170.0f;
-	//	rotated = true;
-	//	break;
-	//case '2':
-	//	alphat += 10.0f;
-	//	if (alphat >= 170.0f)
-	//		alphat == 170.0f;
-	//	rotated = true;
-	//	break;
 
 	case '=':
 	case '+':
@@ -1112,7 +1039,21 @@ void KeyboardFunc(unsigned char key, int x, int y)
 		break;
 	case 'h':
 		t[2] += 0.05f;
+		translated = true;
+		break;
+	case 'm':
+		alphat = -90.0f;
+		alphap = 90.0f;
+		break;
+	case 'd':
+		alphat = 0.0f;
 		alphap = 0.0f;
+		break;
+	
+	case '1':
+		glutIdleFunc(IdleFunc1);
+	case '2':
+		alphaQuat = 0.0f;
 		break;
 	}
 }
@@ -1148,6 +1089,7 @@ void SpecialFunc(int key, int x, int y)
 		t[2] += 0.05f;
 		translated = true;
 		break;
+
 	}
 }
 // ------------------------------------------
