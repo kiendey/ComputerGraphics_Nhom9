@@ -1,99 +1,56 @@
 #version 460
 
-in vec3
-	position_eye,
-	normal_eye;
+in vec3 position_eye, normal_eye;
 
 uniform mat4 view_mat_shader;
+uniform bool light1_enabled; // bi?n ki?m soát ?èn
 
 in vec4 fragment_color;
 out vec4 out_color;
 
 void main() {
-	//-----------ch? ??nh các v? trí-------------
-		// v? trí ngu?n sáng trong th? gi?i
-	vec3 light_position_world = vec3(0.0, 4.0, 2.0);
-	// bi?n ??i v? trí ngu?n sáng sang eye space
-	vec3 light_position_eye = vec3(view_mat_shader * vec4(light_position_world, 1.0));
+    //-----------v? trí ngu?n sáng 1 (trong phòng)-------------
+    vec3 light_position_world_1 = vec3(0.0, 0.0, 0.0);
+    vec3 light_position_eye_1 = vec3(view_mat_shader * vec4(light_position_world_1, 1.0));
 
-	// v? trí viewer
-	vec3 postion_viewer = vec3(0.0, 0.0, 0.0);
+    //-----------v? trí ngu?n sáng 2 (bên ngoài phòng)-------------
+    vec3 light_position_world_2 = vec3(-15.0, 12.0, 15.0); // ??t ngoài phòng
+    vec3 light_position_eye_2 = vec3(view_mat_shader * vec4(light_position_world_2, 1.0));
 
-	// chu?n hóa normal_eye
-	vec3 n_eye = normalize(normal_eye);
+    vec3 position_viewer = vec3(0.0, 0.0, 0.0);
+    vec3 n_eye = normalize(normal_eye);
 
-	// tính vector kho?ng cách t? ngu?n sáng ??n m?t
-	// h??ng vector h??ng t? vertex ??n ngu?n sáng
-	// = v? trí Light - v? trí Vertex
-	vec3 distance_to_light_eye = light_position_eye - position_eye;
-	// chu?n hóa vector kho?ng cách t? ngu?n sáng ??n m?t
-	vec3 direction_to_light_eye = normalize(distance_to_light_eye);
+    // Tính toán ánh sáng t? ngu?n 1 (ch? n?u ?èn 1 b?t)
+    vec3 Id_1 = vec3(0.0);
+    vec3 Is_1 = vec3(0.0);
+    if (light1_enabled) {
+        vec3 distance_to_light_eye_1 = light_position_eye_1 - position_eye;
+        vec3 direction_to_light_eye_1 = normalize(distance_to_light_eye_1);
+        float dot_prod_1 = max(dot(direction_to_light_eye_1, n_eye), 0.0);
+        Id_1 = vec3(0.7, 0.7, 0.7) * vec3(1.0, 0.5, 0.0) * dot_prod_1;
 
-	// tính vector kho?ng cách v? trí viewer và vertex
-	// = v? trí viewer - v? trí vertex
-	vec3 surface_to_viewer_eye = postion_viewer - position_eye;
-	// chu?n hóa	
-	surface_to_viewer_eye = normalize(surface_to_viewer_eye);
+        vec3 half_way_eye_1 = normalize(direction_to_light_eye_1 + normalize(position_viewer - position_eye));
+        float dot_prod_specular_1 = max(dot(half_way_eye_1, n_eye), 0.0);
+        float specular_factor_1 = pow(dot_prod_specular_1, 1500.0);
+        Is_1 = vec3(1.0, 1.0, 1.0) * vec3(1.0, 1.0, 1.0) * specular_factor_1;
+    }
 
-	// --------------c??ng ?? ánh sáng khu?ch tán-----------------------
-		// tính cosin góc gi?a vector h??ng ánh sáng và vector pháp tuy?n: l.n
-	float dot_prod = dot(direction_to_light_eye, n_eye);
-	// l?y giá tr? >=0 ?? lo?i b? giá tr? âm ?ng v?i góc >90 ??
-	dot_prod = max(dot_prod, 0.0);
+    // Tính toán ánh sáng t? ngu?n 2
+    vec3 distance_to_light_eye_2 = light_position_eye_2 - position_eye;
+    vec3 direction_to_light_eye_2 = normalize(distance_to_light_eye_2);
+    float dot_prod_2 = max(dot(direction_to_light_eye_2, n_eye), 0.0);
+    vec3 Id_2 = vec3(0.7, 0.7, 0.7) * vec3(1.0, 0.5, 0.0) * dot_prod_2;
 
-	// c??ng ?? ánh sáng ??n
-	// màu tr?ng m?
-	vec3 Ld = vec3(0.7, 0.7, 0.7);
+    vec3 half_way_eye_2 = normalize(direction_to_light_eye_2 + normalize(position_viewer - position_eye));
+    float dot_prod_specular_2 = max(dot(half_way_eye_2, n_eye), 0.0);
+    float specular_factor_2 = pow(dot_prod_specular_2, 1500.0);
+    vec3 Is_2 = vec3(1.0, 1.0, 1.0) * vec3(1.0, 1.0, 1.0) * specular_factor_2;
 
-	// h? s? ph?n x? khu?ch tán
-	// màu cam
-	vec3 Kd = vec3(1.0, 0.5, 0.0);
+    // Ánh sáng môi tr??ng
+    vec3 Ia = vec3(0.2, 0.2, 0.2) * vec3(1.0, 1.0, 1.0);
 
-	// c??ng ?? ánh sáng khu?ch tán cu?i cùng
-	vec3 Id = Ld * Kd * dot_prod;
+    // T?ng h?p ánh sáng t? c? hai ngu?n
+    vec3 final_color = Id_1 + Is_1 + Id_2 + Is_2 + Ia;
 
-	// -----------------c??ng ?? ánh sáng ph?n x?-------------------		
-	// blinn	
-		// tính vector half way
-	vec3 half_way_eye = surface_to_viewer_eye + direction_to_light_eye;
-	// chu?n hóa vector half way
-	half_way_eye = normalize(half_way_eye);
-
-	// tính cosin góc gi?a vector half_way_eye và vector pháp tuy?n: n.h
-	float dot_prod_specular = dot(half_way_eye, n_eye);
-	// l?y giá tr? >=0 ?? lo?i b? giá tr? âm ?ng v?i góc >90 ??
-	dot_prod_specular = max(dot_prod_specular, 0.0);
-
-	// h? s? sáng bóng
-	float specular_exponent = 100.0;
-	// tính m? v?i h? s? sáng bóng
-	float specular_factor = pow(dot_prod_specular, specular_exponent);
-
-	// ánh sáng ph?n x?
-	// màu tr?ng
-	vec3 Ls = vec3(1.0, 1.0, 1.0);
-
-	// h? s? ph?n x?
-	// ph?n x? toàn ph?n, màu tr?ng
-	vec3 Ks = vec3(1.0, 1.0, 1.0);
-
-	// c??ng ?? ánh sáng ph?n x? cu?i cùng
-	vec3 Is = Ls * Ks * specular_factor;
-
-	// --------------c??ng ?? ánh sáng môi tr??ng---------------
-		// ánh sáng môi tr??ng
-		// màu xám
-	vec3 La = vec3(0.2, 0.2, 0.2);
-
-	// h? s? môi tr??ng
-	// ph?n chi?u hoàn toàn
-	vec3 Ka = vec3(1.0, 1.0, 1.0);
-
-	// c??ng ?? ánh sáng môi tr??ng cu?i cùng
-	vec3 Ia = La * Ka;
-
-	// ------------mau cuoi cung------------
-	//out_color = fragment_color;
-	//out_color = vec4(Is + Id + Ia, 1.0);
-	out_color = vec4(Is + Id + Ia, 1.0) * fragment_color;
+    out_color = vec4(final_color, 1.0) * fragment_color;
 }
