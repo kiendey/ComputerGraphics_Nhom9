@@ -8,7 +8,6 @@
 
 #include <GL/Vector_Matrix.h>
 
-
 using namespace std;
 
 typedef struct
@@ -1911,6 +1910,9 @@ void SpecialFunc(int key, int x, int y)
 
 	}
 }
+
+
+
 // ------------------------------------------
 int main(int argc, char* argv[])
 {
@@ -1935,7 +1937,6 @@ int main(int argc, char* argv[])
 	glutKeyboardFunc(KeyboardFunc);
 	glutSpecialFunc(SpecialFunc);
 	glutCloseFunc(CloseFunc);
-
 	glutMainLoop();
 	return 0;
 }
