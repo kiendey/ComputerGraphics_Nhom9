@@ -413,7 +413,7 @@ Vertex Vertices[] =
 						{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 1.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
 						{ {  0.5f,	 0.5f,	-0.5f, 1.0 },{ 1.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
 						{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 1.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
-						// Vertex[252]
+		// Vertex[252]
 						//kính
 					// v0-v1-v2 (front)
 					{ {  0.5f,  0.5f,  0.5f, 1.0 },{ 0.7f, 0.8f, 0.9f, 0.2f },{ 0, 0, 1, 0 } },
@@ -467,8 +467,176 @@ Vertex Vertices[] =
 					// v6-v5-v4
 					{ { -0.5f,  0.5f, -0.5f, 1.0 },{ 0.7f, 0.8f, 0.9f, 0.2f },{ 0, 0, -1, 0 } },
 					{ {  0.5f,  0.5f, -0.5f, 1.0 },{ 0.7f, 0.8f, 0.9f, 0.2f },{ 0, 0, -1, 0 } },
-					{ {  0.5f, -0.5f, -0.5f, 1.0 },{ 0.7f, 0.8f, 0.9f, 0.2f },{ 0, 0, -1, 0 } }
-					//288
+					{ {  0.5f, -0.5f, -0.5f, 1.0 },{ 0.7f, 0.8f, 0.9f, 0.2f },{ 0, 0, -1, 0 } },
+		//Vertex[288]
+
+		//Khung tranh
+	// v0-v1-v2 (front)
+			{ {  0.5f,	 0.5f,	0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0, 1, 0 } },
+			{ { -0.5f,	 0.5f,	0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0, 1, 0 } },
+			{ { -0.5f,	-0.5f,	0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0, 1, 0 } },
+			// v2-v3-v0
+			{ { -0.5f,	-0.5f,	0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0, 1, 0 } },
+			{ {  0.5f,	-0.5f,	0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0, 1, 0 } },
+			{ {  0.5f,	 0.5f,	0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0, 1, 0 } },
+
+			// v0-v3-v4 (right)
+			{ { 0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	-0.5f,   0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	-0.5f,  -0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 1, 0, 0, 0 } },
+			// v4-v5-v0
+			{ { 0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	 0.5f,   0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 1, 0, 0, 0 } },
+
+			// v0-v5-v6 (top)
+			{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 1, 0, 0 } },
+			{ {  0.5f,	0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 1, 0, 0 } },
+			{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 1, 0, 0 } },
+			// v6-v1-v0
+			{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 1, 0, 0 } },
+			{ { -0.5f,	0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 1, 0, 0 } },
+			{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 1, 0, 0 } },
+
+			// v1-v6-v7 (left)
+			{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ -1, 0, 0, 0 } },
+			// v7-v2-v1
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ -1, 0, 0, 0 } },
+
+			// v7-v4-v3 (bottom)
+			{ { -0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0,-1, 0, 0 } },
+			{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0,-1, 0, 0 } },
+			{ {  0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0,-1, 0, 0 } },
+			// v3-v2-v7
+			{ {  0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0,-1, 0, 0 } },
+			{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0,-1, 0, 0 } },
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0,-1, 0, 0 } },
+
+			// v4-v7-v6 (back)
+			{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0,-1, 0 } },
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0,-1, 0 } },
+			{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0,-1, 0 } },
+			// v6-v5-v4
+			{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0,-1, 0 } },
+			{ {  0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0,-1, 0 } },
+			{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0,-1, 0 } },
+
+//vertex[324]
+			//Ke trung bay 
+			// v0-v1-v2 (front)
+			{ {  0.5f,	 0.5f,	0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0, 1, 0 } },
+			{ { -0.5f,	 0.5f,	0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0, 1, 0 } },
+			{ { -0.5f,	-0.5f,	0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0, 1, 0 } },
+			// v2-v3-v0
+			{ { -0.5f,	-0.5f,	0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0, 1, 0 } },
+			{ {  0.5f,	-0.5f,	0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0, 1, 0 } },
+			{ {  0.5f,	 0.5f,	0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0, 1, 0 } },
+
+			// v0-v3-v4 (right)
+			{ { 0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	-0.5f,   0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	-0.5f,  -0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 1, 0, 0, 0 } },
+			// v4-v5-v0
+			{ { 0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	 0.5f,   0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 1, 0, 0, 0 } },
+
+			// v0-v5-v6 (top)
+			{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 1, 0, 0 } },
+			{ {  0.5f,	0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 1, 0, 0 } },
+			{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 1, 0, 0 } },
+			// v6-v1-v0
+			{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 1, 0, 0 } },
+			{ { -0.5f,	0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 1, 0, 0 } },
+			{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 1, 0, 0 } },
+
+			// v1-v6-v7 (left)
+			{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ -1, 0, 0, 0 } },
+			// v7-v2-v1
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ -1, 0, 0, 0 } },
+
+			// v7-v4-v3 (bottom)
+			{ { -0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0,-1, 0, 0 } },
+			{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0,-1, 0, 0 } },
+			{ {  0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0,-1, 0, 0 } },
+			// v3-v2-v7
+			{ {  0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0,-1, 0, 0 } },
+			{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0,-1, 0, 0 } },
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0,-1, 0, 0 } },
+
+			// v4-v7-v6 (back)
+			{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0,-1, 0 } },
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0,-1, 0 } },
+			{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0,-1, 0 } },
+			// v6-v5-v4
+			{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0,-1, 0 } },
+			{ {  0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.65f, 0.50f, 0.39f, 1.0f },{ 0, 0,-1, 0 } },
+			{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.52f, 0.37f, 0.26f, 1.0f },{ 0, 0,-1, 0 } },
+
+//Vertex[360]
+		//vien tivi do  
+			// v0-v1-v2 (front)
+			{ {  0.5f,	 0.5f,	0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0, 1, 0 } },
+			{ { -0.5f,	 0.5f,	0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0, 1, 0 } },
+			{ { -0.5f,	-0.5f,	0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0, 1, 0 } },
+			// v2-v3-v0
+			{ { -0.5f,	-0.5f,	0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0, 1, 0 } },
+			{ {  0.5f,	-0.5f,	0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0, 1, 0 } },
+			{ {  0.5f,	 0.5f,	0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0, 1, 0 } },
+
+			// v0-v3-v4 (right)
+			{ { 0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	-0.5f,   0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	-0.5f,  -0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 1, 0, 0, 0 } },
+			// v4-v5-v0
+			{ { 0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 1, 0, 0, 0 } },
+			{ { 0.5f,	 0.5f,   0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 1, 0, 0, 0 } },
+
+			// v0-v5-v6 (top)
+			{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
+			{ {  0.5f,	0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
+			{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
+			// v6-v1-v0
+			{ { -0.5f,	0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
+			{ { -0.5f,	0.5f,	 0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
+			{ {  0.5f,	0.5f,	 0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 1, 0, 0 } },
+
+			// v1-v6-v7 (left)
+			{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ -1, 0, 0, 0 } },
+			// v7-v2-v1
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ -1, 0, 0, 0 } },
+			{ { -0.5f,	 0.5f,	 0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ -1, 0, 0, 0 } },
+
+			// v7-v4-v3 (bottom)
+			{ { -0.5f,	 -0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0,-1, 0, 0 } },
+			{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0,-1, 0, 0 } },
+			{ {  0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0,-1, 0, 0 } },
+			// v3-v2-v7
+			{ {  0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0,-1, 0, 0 } },
+			{ { -0.5f,	-0.5f,	 0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0,-1, 0, 0 } },
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0,-1, 0, 0 } },
+
+			// v4-v7-v6 (back)
+			{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
+			{ { -0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
+			{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
+			// v6-v5-v4
+			{ { -0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
+			{ {  0.5f,	 0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
+			{ {  0.5f,	-0.5f,	-0.5f, 1.0 },{ 0.0f, 0.0f, 0.0f, 1.0f },{ 0, 0,-1, 0 } },
+// Vertex[396]
 };
 // ----------------------------------------
 
@@ -542,6 +710,7 @@ float alphap = 0.0f;
 float alphaQuat = 0.0f;
 
 float tTu1 = 0.0f, tTu2 = 0.0f, tTu3 = 0.0f;
+float ktb = 0.0f;
 bool
 translated = false,
 rotated = false,
@@ -1555,6 +1724,67 @@ void TIVI()
 	model_mat_cpp = mvstack.pop();
 }
 
+void KhungTraiTIVI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.9, 2.95, 2.5)) * scale(vec3(0.1f, 2.7f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 360, 396);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungPhaiTIVI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.9, 2.95, -2.55)) * scale(vec3(0.1f, 2.7f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 360, 396);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungTrenTIVI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.9, 4.3, 0.0)) * scale(vec3(0.1f, 0.2f, 5.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 360, 396);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungDuoiTIVI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.9, 1.7, 0.0)) * scale(vec3(0.1f, 0.2f, 5.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 360, 396);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+// Pictures
 void TRANH1()
 {
 	mvstack.push(model_mat_cpp);
@@ -1566,6 +1796,66 @@ void TRANH1()
 
 	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
 	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungTraiTRANH1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 3.2, -1.00)) * scale(vec3(0.1f, 1.2f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungPhaiTRANH1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 3.2, 1.00)) * scale(vec3(0.1f, 1.2f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungTrenTRANH1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 3.8, 0.0)) * scale(vec3(0.1f, 0.2f, 2.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungDuoiTRANH1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 2.7, 0.0)) * scale(vec3(0.1f, 0.2f, 2.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
 
 	model_mat_cpp = mvstack.pop();
 }
@@ -1585,6 +1875,66 @@ void TRANH2()
 	model_mat_cpp = mvstack.pop();
 }
 
+void KhungTraiTRANH2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 1.7, -2.5)) * scale(vec3(0.1f, 1.2f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungPhaiTRANH2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 1.7, -0.5)) * scale(vec3(0.1f, 1.2f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungTrenTRANH2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 2.3, -1.5)) * scale(vec3(0.1f, 0.2f, 2.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungDuoiTRANH2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 1.2, -1.5)) * scale(vec3(0.1f, 0.2f, 2.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+
 void TRANH3()
 {
 	mvstack.push(model_mat_cpp);
@@ -1600,6 +1950,66 @@ void TRANH3()
 	model_mat_cpp = mvstack.pop();
 }
 
+void KhungTraiTRANH3()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 1.7, 0.5)) * scale(vec3(0.1f, 1.2f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungPhaiTRANH3()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 1.7, 2.5)) * scale(vec3(0.1f, 1.2f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungTrenTRANH3()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 2.3, 1.5)) * scale(vec3(0.1f, 0.2f, 2.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void KhungDuoiTRANH3()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-11.93, 1.2, 1.5)) * scale(vec3(0.1f, 0.2f, 2.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 288, 324);
+
+	model_mat_cpp = mvstack.pop();
+}
+// Ghe
 void matNGOI()
 {
 	mvstack.push(model_mat_cpp);
@@ -1614,7 +2024,7 @@ void matNGOI()
 
 	model_mat_cpp = mvstack.pop();
 }
-
+// Quat
 void duiQUAT()
 {
 	mvstack.push(model_mat_cpp);
@@ -2043,6 +2453,183 @@ void tu3TAYNAM()
 
 	model_mat_cpp = mvstack.pop();
 }
+
+// Ke trung bay
+void ktbCANHTRAI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.0, 1.55, 9.4)) * scale(vec3(1.5f, 8.7f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 324, 360);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void ktbCANHPHAI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.0, 1.55, 6.0)) * scale(vec3(1.5f, 8.7f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 324, 360);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void ktbCANHTREN()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.18, 6.0, 7.75)) * scale(vec3(1.5f, 0.2f, 3.55f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 324, 360);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void ktbNgang1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.1, 4.0, 7.6)) * scale(vec3(1.5f, 0.2f, 3.45f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 324, 360);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void ktbNgang2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.1, 2.0, 7.6)) * scale(vec3(1.5f, 0.2f, 3.45f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 324, 360);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void ktbNgang3()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.1, 0.0, 7.6)) * scale(vec3(1.5f, 0.2f, 3.45f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 324, 360);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void ktbTRAI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(10.9, -1.3, 4.35)) * scale(vec3(1.4f, 2.5f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void ktbPHAI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(10.9, -1.3, 1.45)) * scale(vec3(1.4f, 2.5f, 0.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+void ktbDUOI()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(10.8, -2.5, 2.95)) * scale(vec3(1.4f, 0.2f, 3.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+void ktbTRUOC()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(10.1, -1.2, 3.0)) * scale(vec3(0.2f, 2.4f, 3.1f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+void ktbSAU()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.6, -1.6, 3.0)) * scale(vec3(0.2f, 2.4f, 3.1f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
+void ktbTAYNAM()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(9.95, -0.9, 3.0)) * scale(vec3(0.2f, 0.3f, 0.75f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 72, 108);
+
+	model_mat_cpp = mvstack.pop();
+}
 // ------------------------------------------
 string ReadShaderSourceFile(string fileName) {
 	fstream reader(fileName.c_str());
@@ -2286,18 +2873,37 @@ void DisplayFunc(void)
 
 	mvstack.push(model_mat_cpp);
 	TIVI();
+	KhungPhaiTIVI();
+	KhungTraiTIVI();
+	KhungTrenTIVI();
+	KhungDuoiTIVI();
 	model_mat_cpp = mvstack.pop();
-
+// Tranh
 	mvstack.push(model_mat_cpp);
+	model_mat_cpp = model_mat_cpp * translate(vec3(0.0, 1.5, 0.0));
 	TRANH1();
+	KhungTraiTRANH1();
+	KhungPhaiTRANH1();
+	KhungTrenTRANH1();
+	KhungDuoiTRANH1();
 	model_mat_cpp = mvstack.pop();
 
 	mvstack.push(model_mat_cpp);
+	model_mat_cpp = model_mat_cpp * translate(vec3(0.0, 1.5, 0.0));
 	TRANH2();
+	KhungTraiTRANH2();
+	KhungPhaiTRANH2();
+	KhungTrenTRANH2();
+	KhungDuoiTRANH2();
 	model_mat_cpp = mvstack.pop();
 
 	mvstack.push(model_mat_cpp);
+	model_mat_cpp = model_mat_cpp * translate(vec3(0.0, 1.5, 0.0));
 	TRANH3();
+	KhungTraiTRANH3();
+	KhungPhaiTRANH3();
+	KhungTrenTRANH3();
+	KhungDuoiTRANH3();
 	model_mat_cpp = mvstack.pop();
 
 	mvstack.push(model_mat_cpp);
@@ -2315,45 +2921,62 @@ void DisplayFunc(void)
 	canhQUATTRUOC();
 	canhQUATSAU();
 	model_mat_cpp = mvstack.pop();
-
+// Tu tivi
 	mvstack.push(model_mat_cpp);
-	model_mat_cpp = model_mat_cpp;
+	model_mat_cpp = model_mat_cpp * translate(vec3(0.1,0,0));
 	tuCANHTRAI();
 	tuCANHPHAI();
 	tuCANHTREN();
 	tuCANHSAU();
 
-	// Tu 1
-	mvstack.push(model_mat_cpp);
-	model_mat_cpp = model_mat_cpp * translate(vec3(tTu1, 0.0, 0.0));
-	tu1TRAI();
-	tu1PHAI();
-	tu1DUOI();
-	tu1TRUOC();
-	tu1SAU();
-	tu1TAYNAM();
-	model_mat_cpp = mvstack.pop();
-	//Tu 2
-	mvstack.push(model_mat_cpp);
-	model_mat_cpp = model_mat_cpp * translate(vec3(tTu2, 0.0, 0.0));
-	tu2TRAI();
-	tu2PHAI();
-	tu2DUOI();
-	tu2TRUOC();
-	tu2SAU();
-	tu2TAYNAM();
-	model_mat_cpp = mvstack.pop();
-	//Tu 3
-	mvstack.push(model_mat_cpp);
-	model_mat_cpp = model_mat_cpp * translate(vec3(tTu3, 0.0, 0.0));
-	tu3TRAI();
-	tu3PHAI();
-	tu3DUOI();
-	tu3TRUOC();
-	tu3SAU();
-	tu3TAYNAM();
-	model_mat_cpp = mvstack.pop();
+		// Tu 1
+		mvstack.push(model_mat_cpp);
+		model_mat_cpp = model_mat_cpp * translate(vec3(tTu1, 0.0, 0.0));
+		tu1TRAI();
+		tu1PHAI();
+		tu1DUOI();
+		tu1TRUOC();
+		tu1SAU();
+		tu1TAYNAM();
+		model_mat_cpp = mvstack.pop();
+		//Tu 2
+		mvstack.push(model_mat_cpp);
+		model_mat_cpp = model_mat_cpp * translate(vec3(tTu2, 0.0, 0.0));
+		tu2TRAI();
+		tu2PHAI();
+		tu2DUOI();
+		tu2TRUOC();
+		tu2SAU();
+		tu2TAYNAM();
+		model_mat_cpp = mvstack.pop();
+		//Tu 3
+		mvstack.push(model_mat_cpp);
+		model_mat_cpp = model_mat_cpp * translate(vec3(tTu3, 0.0, 0.0));
+		tu3TRAI();
+		tu3PHAI();
+		tu3DUOI();
+		tu3TRUOC();
+		tu3SAU();
+		tu3TAYNAM();
+		model_mat_cpp = mvstack.pop();
 
+	model_mat_cpp = mvstack.pop();
+// Ke trung bay
+	mvstack.push(model_mat_cpp);
+	ktbCANHTRAI();
+	ktbCANHPHAI();
+	ktbCANHTREN();
+	ktbNgang1();
+	ktbNgang2();
+	ktbNgang3();
+	model_mat_cpp = model_mat_cpp * translate(vec3(ktb, 0.0, 0.0));
+	model_mat_cpp = model_mat_cpp * translate(vec3(0, 0.05, 4.7));
+	ktbPHAI();
+	ktbTRAI();
+	ktbDUOI();
+	ktbSAU();
+	ktbTRUOC();
+	ktbTAYNAM();
 	model_mat_cpp = mvstack.pop();
 
 	glutSwapBuffers();
@@ -2528,6 +3151,12 @@ void KeyboardFunc(unsigned char key, int x, int y)
 	case '7':
 		alphasop = 0.0f;
 		alphasot = 0.0f;
+		break;
+	case 'k':
+		ktb = -1.2;
+		break;
+	case 'K':
+		ktb = 0.0;
 		break;
 	}
 }
