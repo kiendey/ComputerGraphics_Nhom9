@@ -718,6 +718,13 @@ scaled = false;
 
 float alphasop = 0.0f;
 float alphasot = 0.0f;
+float cameraSpeed = 0.2f;
+
+vec3 eye(0.0f, 8.0f, 30.0f),
+at(0.0f, 0.0f, 0.0f),
+up(0.0f, 1.0f, 0.0f);
+
+
 bool light1Enabled = false;
 // ------------------------------------------
 void MATSAN()
@@ -1719,7 +1726,7 @@ void TIVI()
 	mat4 model_MS = model_mat_cpp * instance;
 
 	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
-	glDrawArrays(GL_TRIANGLES, 72, 108);
+	glDrawArrays(GL_TRIANGLES, 360, 396);
 
 	model_mat_cpp = mvstack.pop();
 }
@@ -2731,10 +2738,6 @@ void DisplayFunc(void)
 		glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_mat_cpp.m);
 	}
 
-	vec3	eye(0.0f, 8.0f, 30.0f),
-		at(0.0f, 0.0f, 0.0f),
-		up(0.0f, 1.0f, 0.0f);
-
 	view_mat_cpp = lookat(eye, at, up);
 	view_mat_location = glGetUniformLocation(ProgramId, "view_mat_shader");
 	glUniformMatrix4fv(view_mat_location, 1, GL_FALSE, view_mat_cpp.m);
@@ -3168,31 +3171,24 @@ void SpecialFunc(int key, int x, int y)
 
 	switch (key)
 	{
-	case GLUT_KEY_LEFT:
-		t[0] -= 0.05f;
-		translated = true;
+	case GLUT_KEY_LEFT:// nhìn sang trái
+		eye = eye + normalize(cross(vec3(0.0, 0.0, -1.0), up)) * cameraSpeed;
 		break;
-	case GLUT_KEY_RIGHT:
-		t[0] += 0.05f;
-		translated = true;
+	case GLUT_KEY_RIGHT://nhìn từ phải sang
+		eye = eye - normalize(cross(vec3(0.0, 0.0, -1.0), up)) * cameraSpeed;
 		break;
-	case GLUT_KEY_UP:
-		t[1] += 0.05f;
-		translated = true;
+	case GLUT_KEY_UP://lại gần
+		eye = eye + cameraSpeed * vec3(0.0f, 0.0f, -1.0f);
 		break;
-	case GLUT_KEY_DOWN:
-		t[1] -= 0.05f;
-		translated = true;
+	case GLUT_KEY_DOWN://ra xa
+		eye = eye - cameraSpeed * vec3(0.0f, 0.0f, -1.0f);
 		break;
-	case GLUT_KEY_ALT_R:
-		t[2] -= 0.05f;
-		translated = true;
+	case GLUT_KEY_ALT_R://lên trên
+		eye = eye + vec3(0.0f, 1.0f, 0.0f) * cameraSpeed;
 		break;
-	case GLUT_KEY_CTRL_R:
-		t[2] += 0.05f;
-		translated = true;
+	case GLUT_KEY_CTRL_R://xuống dưới
+		eye = eye - vec3(0.0f, 1.0f, 0.0f) * cameraSpeed;
 		break;
-
 	}
 }
 
