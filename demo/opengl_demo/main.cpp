@@ -1945,6 +1945,38 @@ void KhungDuoiTRANH2()
 	model_mat_cpp = mvstack.pop();
 }
 
+// Loa
+
+void keLoa()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.3, 3.6, -9.3)) * scale(vec3(2.2f, 0.2f, 2.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void loa()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3( 11.1, 4.75, -9.15)) * scale(vec3(1.4f, 2.3f, 1.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+
 // Ghe
 void matNGOI()
 {
@@ -2390,8 +2422,65 @@ void tu3TAYNAM()
 	model_mat_cpp = mvstack.pop();
 }
 
-//Loa
+void dauDVD()
+{
+	mvstack.push(model_mat_cpp);
 
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.0, 0.35, 0.2)) * scale(vec3(0.5f, 0.3f, 2.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void wifi()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(10.9, 0.35, -3.0)) * scale(vec3(1.0f, 0.25f, 1.8f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void rauWifi1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.17, 1.0, -2.21)) * scale(vec3(0.15f, 1.3f, 0.15f)) ;
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+
+void rauWifi2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(11.17, 1.0, -3.77)) * scale(vec3(0.15f, 1.3f, 0.15f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
 
 // Ke trung bay
 void ktbCANHTRAI()
@@ -2532,7 +2621,7 @@ void ktbTRUOC()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(10.1, -1.2, 3.0)) * scale(vec3(0.2f, 2.4f, 3.1f));
+	instance = translate(vec3(10.1, -1.3, 3.0)) * scale(vec3(0.2f, 2.4f, 3.1f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2546,7 +2635,7 @@ void ktbSAU()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(11.6, -1.6, 3.0)) * scale(vec3(0.2f, 2.4f, 3.1f));
+	instance = translate(vec3(11.7, -1.4, 3.0)) * scale(vec3(0.2f, 2.4f, 3.1f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2857,6 +2946,13 @@ void DisplayFunc(void)
 	tuCANHPHAI();
 	tuCANHTREN();
 	tuCANHSAU();
+	dauDVD();
+		//Wifi
+		mvstack.push(model_mat_cpp);
+		wifi();
+		rauWifi1();
+		rauWifi2();
+		model_mat_cpp = mvstack.pop();
 
 		// Tu 1
 		mvstack.push(model_mat_cpp);
@@ -2906,6 +3002,11 @@ void DisplayFunc(void)
 	ktbSAU();
 	ktbTRUOC();
 	ktbTAYNAM();
+	model_mat_cpp = mvstack.pop();
+//Loa
+	mvstack.push(model_mat_cpp);
+	keLoa();
+	loa();
 	model_mat_cpp = mvstack.pop();
 
 	glutSwapBuffers();
