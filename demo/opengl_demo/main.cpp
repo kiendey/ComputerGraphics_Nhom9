@@ -204,7 +204,8 @@ TextureId8,//Kênh ti vi 2
 TextureId9,//no signal
 TextureId10,//viền gỗ khung tranh
 TextureId11,//tranh to
-TextureId12;//tranh bé
+TextureId12,//tranh bé
+TextureId13;
 
 GLuint LoadTexture(const char* filename)
 {
@@ -245,6 +246,7 @@ void InitTextures()
 	TextureId10 = LoadTexture("textures/gocongnghiep.jpg");
 	TextureId11 = LoadTexture("textures/tranh.jpg");
 	TextureId12 = LoadTexture("textures/tranhbe.jpg");
+	TextureId13 = LoadTexture("textures/nhuatrang.jpg");
 }
 // ------------------------------------------
 void CreatVaoVbo()
@@ -1488,6 +1490,367 @@ void chanPHAISAU()
 	model_mat_cpp = mvstack.pop();
 }
 //----------------------------------------------------------------------------------
+void matGHE()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(0.0, -1.4, 0.0)) * scale(vec3(4.0f, 0.2f, 7.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanGHETRAITRUOC()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.8f, -2.25f, 3.3f)) * scale(vec3(0.4f, 1.5f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanGHETRAISAU()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.8f, -2.25f, 3.3f)) * scale(vec3(0.4f, 1.5f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanGHEPHAISAU()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.8f, -2.25f, -3.3f)) * scale(vec3(0.4f, 1.5f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanGHEPHAITRUOC()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.8f, -2.25f, -3.3f)) * scale(vec3(0.4f, 1.5f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void taynamPHAIGHE()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(0.0, -0.7, 3.0)) * scale(vec3(4.0f, 0.2f, 1.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chantaynamPHAIGHE1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.9, -1.05, 3.0)) * scale(vec3(0.2f, 0.7f, 1.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chantaynamPHAIGHE2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.9, -1.05, 3.0)) * scale(vec3(0.2f, 0.7f, 1.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void taynamTRAIGHE()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(0.0, -0.7, -3.0)) * scale(vec3(4.0f, 0.2f, 1.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chantaynamTRAIGHE1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.9, -1.05, -3.0)) * scale(vec3(0.2f, 0.7f, 1.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chantaynamTRAIGHE2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.9, -1.05, -3.0)) * scale(vec3(0.2f, 0.7f, 1.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void matTUA()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.9, -0.3, 0.0)) * scale(vec3(0.2f, 2.0f, 5.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void matGHENGAN()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(0.0, -1.4, 0.0)) * scale(vec3(4.0f, 0.2f, 3.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanGHENGANTRAITRUOC()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.8f, -2.25f, 1.3f)) * scale(vec3(0.4f, 1.5f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanGHENGANTRAISAU()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.8f, -2.25f, -1.3f)) * scale(vec3(0.4f, 1.5f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanGHENGANPHAISAU()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.8f, -2.25f, -1.3f)) * scale(vec3(0.4f, 1.5f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chanGHENGANPHAITRUOC()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.8f, -2.25f, 1.3f)) * scale(vec3(0.4f, 1.5f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void taynamPHAIGHENGAN()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(0.0, -0.7, 1.3)) * scale(vec3(4.0f, 0.2f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chantaynamPHAIGHENGAN1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.9, -1.05, 1.3)) * scale(vec3(0.2f, 0.7f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chantaynamPHAIGHENGAN2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.9, -1.05, 1.3)) * scale(vec3(0.2f, 0.7f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void taynamTRAIGHENGAN()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(0.0, -0.7, -1.3)) * scale(vec3(4.0f, 0.2f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chantaynamTRAIGHENGAN1()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.9, -1.05, -1.3)) * scale(vec3(0.2f, 0.7f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void chantaynamTRAIGHENGAN2()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(-1.9, -1.05, -1.3)) * scale(vec3(0.2f, 0.7f, 0.4f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+void matTUAGHENGAN()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(1.9, -0.3, 0.0)) * scale(vec3(0.2f, 2.0f, 2.2f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
+//----------------------------------------------------------------------------------
 void TIVI()
 {
 	mvstack.push(model_mat_cpp);
@@ -1587,7 +1950,7 @@ void TRANH()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(-11.98, 2.6, 0.0)) * scale(vec3(0.04f, 3.0f, 6.0f));
+	instance = translate(vec3(-11.98, 2.6, 0.0)) * rotate_x(180) * scale(vec3(0.04f, 3.0f, 6.0f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -1667,7 +2030,7 @@ void TRANH2()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(5.5, 3.6, -10.0)) * scale(vec3(4.0f, 2.0f, 0.04f));
+	instance = translate(vec3(5.5, 3.6, -10.0)) * rotate_z(180) * scale(vec3(4.0f, 2.0f, 0.04f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -1754,6 +2117,8 @@ void keLoa()
 	mat4 model_MS = model_mat_cpp * instance;
 
 	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	
+	glBindTexture(GL_TEXTURE_2D, TextureId3);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 
 	model_mat_cpp = mvstack.pop();
@@ -1769,6 +2134,7 @@ void loa()
 	mat4 model_MS = model_mat_cpp * instance;
 
 	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId5);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 
 	model_mat_cpp = mvstack.pop();
@@ -2257,6 +2623,7 @@ void dauDVD()
 	mat4 model_MS = model_mat_cpp * instance;
 
 	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId5);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 
 	model_mat_cpp = mvstack.pop();
@@ -2272,6 +2639,7 @@ void wifi()
 	mat4 model_MS = model_mat_cpp * instance;
 
 	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId13);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 
 	model_mat_cpp = mvstack.pop();
@@ -2287,6 +2655,7 @@ void rauWifi1()
 	mat4 model_MS = model_mat_cpp * instance;
 
 	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId13);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 
 	model_mat_cpp = mvstack.pop();
@@ -2302,6 +2671,7 @@ void rauWifi2()
 	mat4 model_MS = model_mat_cpp * instance;
 
 	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId13);
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 
 	model_mat_cpp = mvstack.pop();
@@ -2667,6 +3037,54 @@ void DisplayFunc(void)
 	chanTRAISAU();
 	chanPHAITRUOC();
 	chanPHAISAU();
+	model_mat_cpp = mvstack.pop();
+	//ghế dài
+	mvstack.push(model_mat_cpp);
+	model_mat_cpp = model_mat_cpp * translate(vec3( -9.0f, 0.0f, 0.0f));
+	matGHE();
+	chanGHETRAITRUOC();
+	chanGHEPHAITRUOC();
+	chanGHEPHAISAU();
+	chanGHETRAISAU();
+	taynamPHAIGHE();
+	chantaynamPHAIGHE1();
+	chantaynamPHAIGHE2();
+	taynamTRAIGHE();
+	chantaynamTRAIGHE1();
+	chantaynamTRAIGHE2();
+	matTUA();
+	model_mat_cpp = mvstack.pop();
+	//ghế ngắn
+	mvstack.push(model_mat_cpp);
+	model_mat_cpp = model_mat_cpp * translate(vec3(0.0, 0.0, -1.5));
+	matGHENGAN();
+	chanGHENGANPHAISAU();
+	chanGHENGANPHAITRUOC();
+	chanGHENGANTRAISAU();
+	chanGHENGANTRAITRUOC();
+	taynamPHAIGHENGAN();
+	taynamTRAIGHENGAN();
+	chantaynamPHAIGHENGAN1();
+	chantaynamPHAIGHENGAN2();
+	chantaynamTRAIGHENGAN1();
+	chantaynamTRAIGHENGAN2();
+	matTUAGHENGAN();
+	model_mat_cpp = mvstack.pop();
+
+	mvstack.push(model_mat_cpp);
+	model_mat_cpp = model_mat_cpp * translate(vec3(0.0, 0.0, 1.5));
+	matGHENGAN();
+	chanGHENGANPHAISAU();
+	chanGHENGANPHAITRUOC();
+	chanGHENGANTRAISAU();
+	chanGHENGANTRAITRUOC();
+	taynamPHAIGHENGAN();
+	taynamTRAIGHENGAN();
+	chantaynamPHAIGHENGAN1();
+	chantaynamPHAIGHENGAN2();
+	chantaynamTRAIGHENGAN1();
+	chantaynamTRAIGHENGAN2();
+	matTUAGHENGAN();
 	model_mat_cpp = mvstack.pop();
 	//tivi
 	mvstack.push(model_mat_cpp);
