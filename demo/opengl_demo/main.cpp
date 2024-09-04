@@ -2139,22 +2139,6 @@ void loa()
 
 	model_mat_cpp = mvstack.pop();
 }
-
-// Ghe
-void matNGOI()
-{
-	mvstack.push(model_mat_cpp);
-
-	mat4 instance = identity_mat4();
-	instance = translate(vec3(-9.7, -1.99, 0.0)) * scale(vec3(3.0f, 2.0f, 6.0f));
-
-	mat4 model_MS = model_mat_cpp * instance;
-
-	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
-	glDrawArrays(GL_TRIANGLES, 72, 108);
-
-	model_mat_cpp = mvstack.pop();
-}
 // Quat
 void duiQUAT()
 {
