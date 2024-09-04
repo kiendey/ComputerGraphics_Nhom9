@@ -2865,6 +2865,21 @@ void ktbTAYNAM()
 
 	model_mat_cpp = mvstack.pop();
 }
+void DENTRAN()
+{
+	mvstack.push(model_mat_cpp);
+
+	mat4 instance = identity_mat4();
+	instance = translate(vec3(0.0, 6.5f, 0.0f)) * scale(vec3(5.0f, 1.0f, 5.0f));
+
+	mat4 model_MS = model_mat_cpp * instance;
+
+	glUniformMatrix4fv(model_mat_location, 1, GL_FALSE, model_MS.m);
+	glBindTexture(GL_TEXTURE_2D, TextureId13);
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+
+	model_mat_cpp = mvstack.pop();
+}
 void DisplayFunc(void)
 {
 	model_mat_cpp = identity_mat4();
@@ -3196,6 +3211,10 @@ void DisplayFunc(void)
 	loa();
 	model_mat_cpp = mvstack.pop();
 
+	//đèn trần
+	mvstack.push(model_mat_cpp);
+	DENTRAN();
+	model_mat_cpp = mvstack.pop();
 	glutSwapBuffers();
 }
 // ------------------------------------------
