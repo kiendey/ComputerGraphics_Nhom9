@@ -2014,7 +2014,7 @@ void KhungDuoiTRANH()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(-11.85, 1.0, 0.0)) * scale(vec3(0.2f, 0.2f, 6.2f));
+	instance = translate(vec3(-11.85, 1.0, 0.0)) * scale(vec3(0.2f, 0.2f, 6.31f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2257,7 +2257,7 @@ void tuCANHTRAI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(11.0, -1.5, 4.5)) * scale(vec3(1.5f, 3.0f, 0.2f));
+	instance = translate(vec3(11.0, -1.5, 4.45)) * scale(vec3(1.5f, 3.0f, 0.2f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2288,7 +2288,7 @@ void tuCANHTREN()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(11.0, 0, 0)) * scale(vec3(1.7f, 0.3f, 9.05f));
+	instance = translate(vec3(11.0, 0, 0)) * scale(vec3(1.7f, 0.3f, 9.2f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2304,7 +2304,7 @@ void tuCANHSAU()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(11.6, -1.15, 0)) * scale(vec3(0.2f, 2.5f, 9.05f));
+	instance = translate(vec3(11.6, -1.15, 0.0)) * scale(vec3(0.2f, 2.5f, 8.9f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2320,7 +2320,7 @@ void tu1TRAI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(10.9, -1.3, 4.35)) * scale(vec3(1.4f, 2.5f, 0.2f));
+	instance = translate(vec3(10.9, -1.3, 4.3)) * scale(vec3(1.4f, 2.5f, 0.2f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2336,7 +2336,7 @@ void tu1PHAI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(10.9, -1.3, 1.65)) * scale(vec3(1.4f, 2.5f, 0.2f));
+	instance = translate(vec3(10.9, -1.3, 1.62)) * scale(vec3(1.4f, 2.5f, 0.2f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2441,7 +2441,7 @@ void tu3DUOI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(10.8, -2.5, -2.85)) * scale(vec3(1.4f, 0.2f, 2.9f));
+	instance = translate(vec3(10.8, -2.5, -2.82)) * scale(vec3(1.4f, 0.2f, 2.855f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2456,7 +2456,7 @@ void tu1TRUOC()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(10.1, -1.2, 3.0)) * scale(vec3(0.2f, 2.4f, 2.8f));
+	instance = translate(vec3(10.1, -1.28, 2.98)) * scale(vec3(0.2f, 2.4f, 2.87f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2472,7 +2472,7 @@ void tu2TRUOC()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(10.1, -1.2, 0.1)) * scale(vec3(0.2f, 2.4f, 2.8f));
+	instance = translate(vec3(10.1, -1.3, 0.1)) * scale(vec3(0.2f, 2.4f, 2.84f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2488,7 +2488,7 @@ void tu3TRUOC()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(10.1, -1.2, -2.8)) * scale(vec3(0.2f, 2.4f, 2.8f));
+	instance = translate(vec3(10.1, -1.3, -2.82)) * scale(vec3(0.2f, 2.4f, 2.9f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2504,7 +2504,7 @@ void tu1SAU()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(11.6, -1.6, 3.0)) * scale(vec3(0.2f, 2.4f, 2.8f));
+	instance = translate(vec3(11.55, -1.28, 3.0)) * scale(vec3(0.2f, 2.4f, 2.8f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2520,7 +2520,7 @@ void tu2SAU()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(11.6, -1.6, 0.1)) * scale(vec3(0.2f, 2.4f, 2.8f));
+	instance = translate(vec3(11.55, -1.28, 0.1)) * scale(vec3(0.2f, 2.4f, 2.8f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2536,7 +2536,7 @@ void tu3SAU()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(11.6, -1.6, -2.8)) * scale(vec3(0.2f, 2.4f, 2.8f));
+	instance = translate(vec3(11.55, -1.28, -2.8)) * scale(vec3(0.2f, 2.4f, 2.8f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2763,7 +2763,7 @@ void ktbTRAI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(10.9, -1.3, 4.35)) * scale(vec3(1.4f, 2.5f, 0.2f));
+	instance = translate(vec3(10.9, -1.3, 4.55)) * scale(vec3(1.4f, 2.5f, 0.2f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2779,7 +2779,7 @@ void ktbPHAI()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(10.9, -1.3, 1.45)) * scale(vec3(1.4f, 2.5f, 0.2f));
+	instance = translate(vec3(10.9, -1.3, 1.43)) * scale(vec3(1.4f, 2.5f, 0.2f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -2809,7 +2809,7 @@ void ktbTRUOC()
 	mvstack.push(model_mat_cpp);
 
 	mat4 instance = identity_mat4();
-	instance = translate(vec3(10.1, -1.3, 3.0)) * scale(vec3(0.2f, 2.4f, 3.1f));
+	instance = translate(vec3(10.1, -1.3, 3.0)) * scale(vec3(0.2f, 2.4f, 3.2f));
 
 	mat4 model_MS = model_mat_cpp * instance;
 
@@ -3093,6 +3093,7 @@ void DisplayFunc(void)
 	KhungTrenTIVI();
 	KhungDuoiTIVI();
 	model_mat_cpp = mvstack.pop();
+
 	// Tranh
 	mvstack.push(model_mat_cpp);
 	model_mat_cpp = model_mat_cpp * translate(vec3(0.0, 1.5, 0.0));
@@ -3110,7 +3111,8 @@ void DisplayFunc(void)
 	KhungTrenTRANH2();
 	KhungDuoiTRANH2();
 	model_mat_cpp = mvstack.pop();
-	//quạt
+
+	//Quạt trần
 	mvstack.push(model_mat_cpp);
 	model_mat_cpp = model_mat_cpp * translate(vec3(-4.5, 0, 0));
 	duiQUAT();
@@ -3122,6 +3124,7 @@ void DisplayFunc(void)
 	canhQUATTRUOC();
 	canhQUATSAU();
 	model_mat_cpp = mvstack.pop();
+
 	// Tu tivi
 	mvstack.push(model_mat_cpp);
 	model_mat_cpp = model_mat_cpp * translate(vec3(0.1, 0, 0));
@@ -3137,36 +3140,36 @@ void DisplayFunc(void)
 		rauWifi2();
 		model_mat_cpp = mvstack.pop();
 
-	// Tu 1
-	mvstack.push(model_mat_cpp);
-	model_mat_cpp = model_mat_cpp * translate(vec3(tTu1, 0.0, 0.0));
-	tu1TRAI();
-	tu1PHAI();
-	tu1DUOI();
-	tu1TRUOC();
-	tu1SAU();
-	tu1TAYNAM();
-	model_mat_cpp = mvstack.pop();
-	//Tu 2
-	mvstack.push(model_mat_cpp);
-	model_mat_cpp = model_mat_cpp * translate(vec3(tTu2, 0.0, 0.0));
-	tu2TRAI();
-	tu2PHAI();
-	tu2DUOI();
-	tu2TRUOC();
-	tu2SAU();
-	tu2TAYNAM();
-	model_mat_cpp = mvstack.pop();
-	//Tu 3
-	mvstack.push(model_mat_cpp);
-	model_mat_cpp = model_mat_cpp * translate(vec3(tTu3, 0.0, 0.0));
-	tu3TRAI();
-	tu3PHAI();
-	tu3DUOI();
-	tu3TRUOC();
-	tu3SAU();
-	tu3TAYNAM();
-	model_mat_cpp = mvstack.pop();
+		// Tu 1
+		mvstack.push(model_mat_cpp);
+		model_mat_cpp = model_mat_cpp * translate(vec3(tTu1, -0.09, 0.0));
+		tu1TRAI();
+		tu1PHAI();
+		tu1DUOI();
+		tu1TRUOC();
+		tu1SAU();
+		tu1TAYNAM();
+		model_mat_cpp = mvstack.pop();
+		//Tu 2
+		mvstack.push(model_mat_cpp);
+		model_mat_cpp = model_mat_cpp * translate(vec3(tTu2, -0.09, 0.0));
+		tu2TRAI();
+		tu2PHAI();
+		tu2DUOI();
+		tu2TRUOC();
+		tu2SAU();
+		tu2TAYNAM();
+		model_mat_cpp = mvstack.pop();
+		//Tu 3
+		mvstack.push(model_mat_cpp);
+		model_mat_cpp = model_mat_cpp * translate(vec3(tTu3, -0.09, 0.0));
+		tu3TRAI();
+		tu3PHAI();
+		tu3DUOI();
+		tu3TRUOC();
+		tu3SAU();
+		tu3TAYNAM();
+		model_mat_cpp = mvstack.pop();
 
 	model_mat_cpp = mvstack.pop();
 	// Ke trung bay
