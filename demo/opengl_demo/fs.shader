@@ -35,14 +35,14 @@ void main() {
         float dot_prod_1 = max(dot(direction_to_light_eye_1, n_eye), 0.0);
         Id_1 = vec3(0.7, 0.7, 0.7) * vec3(0.8, 0.5, 0.3) * dot_prod_1;
 
-        // Tính ánh sáng ph?n x? t? ngu?n 1
+        // Tính ánh sáng phan xa tu ngu?n 1
         vec3 half_way_eye_1 = normalize(direction_to_light_eye_1 + normalize(position_viewer - position_eye));
         float dot_prod_specular_1 = max(dot(half_way_eye_1, n_eye), 0.0);
         float specular_factor_1 = pow(dot_prod_specular_1, 150.0);
         Is_1 = vec3(0.7, 0.7, 0.7) * vec3(0.8, 0.5, 0.3) * specular_factor_1;
     }
 
-    // Tính toán ánh sáng t? ngu?n 2
+    // Tính toán ánh sáng tu nguon 2
     vec3 distance_to_light_eye_2 = light_position_eye_2 - position_eye;
     vec3 direction_to_light_eye_2 = normalize(distance_to_light_eye_2);
     

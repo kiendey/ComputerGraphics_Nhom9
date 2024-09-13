@@ -205,7 +205,7 @@ TextureId9,//no signal
 TextureId10,//viền gỗ khung tranh
 TextureId11,//tranh to
 TextureId12,//tranh bé
-TextureId13;
+TextureId13;//nhựa trắng
 
 GLuint LoadTexture(const char* filename)
 {
